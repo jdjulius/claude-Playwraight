@@ -14,4 +14,8 @@ export class InventoryPage {
   async getCartCount(): Promise<string> {
     return (await this.cartBadge.textContent()) ?? '0';
   }
+
+  async goToCart(): Promise<void> {
+    await this.page.locator('[data-test="shopping-cart-link"]').click();
+  }
 }
