@@ -12,9 +12,10 @@ export default defineConfig({
   ],
   use: {
     baseURL: process.env.BASE_URL ?? 'https://www.saucedemo.com',
+    headless: false,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'on-first-retry',
+    video: 'on',
   },
   projects: [
     {
