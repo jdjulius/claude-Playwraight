@@ -11,7 +11,7 @@ export default defineConfig({
     ['list'],
   ],
   use: {
-    headless: false,
+    headless: !!process.env.CI,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on',

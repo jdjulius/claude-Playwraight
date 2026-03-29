@@ -8,7 +8,10 @@
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "test:explore": "playwright test tests/e2e/paisabombas/explore.spec.ts --project=paisabombas --headed",
+    "test:paisabombas": "playwright test --project=paisabombas",
+    "test:saucedemo": "playwright test --project=saucedemo"
   },
   "keywords": [],
   "author": "",

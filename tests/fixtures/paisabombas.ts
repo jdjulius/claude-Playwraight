@@ -13,7 +13,7 @@ type PaisabombasFixtures = {
 };
 
 const EMAIL = process.env.APP_EMAIL ?? 'apollostudiogt@gmail.com';
-const PASSWORD = process.env.APP_PASSWORD ?? '';
+const PASSWORD = process.env.APP_PASSWORD ?? 'wQt2x7@zI10*';
 
 export const test = base.extend<PaisabombasFixtures>({
   authPage: async ({ page }, use) => {
