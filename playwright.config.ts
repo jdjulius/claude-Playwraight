@@ -11,7 +11,6 @@ export default defineConfig({
     ['list'],
   ],
   use: {
-    baseURL: process.env.BASE_URL ?? 'https://www.saucedemo.com',
     headless: false,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
@@ -19,8 +18,20 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'saucedemo',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: process.env.SAUCE_BASE_URL ?? 'https://www.saucedemo.com',
+      },
+      testMatch: ['**/add-to-cart.spec.ts'],
+    },
+    {
+      name: 'paisabombas',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: process.env.APP_BASE_URL ?? 'https://dev.paisabombas.app',
+      },
+      testMatch: ['**/paisabombas/**/*.spec.ts'],
     },
   ],
   outputDir: 'test-results/',
