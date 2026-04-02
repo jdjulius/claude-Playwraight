@@ -22,7 +22,8 @@ export class AuthPage {
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
     await this.submitButton.click();
-    await this.page.waitForLoadState('networkidle');
+    // Esperar a que la URL cambie fuera del login (confirma que la sesión quedó activa)
+    await this.page.waitForURL(url => !url.pathname.includes('login'), { timeout: 15000 });
   }
 
   async isLoginPage(): Promise<boolean> {

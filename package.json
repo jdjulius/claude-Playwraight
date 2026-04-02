@@ -11,7 +11,9 @@
     "report": "playwright show-report",
     "test:explore": "playwright test tests/e2e/paisabombas/explore.spec.ts --project=paisabombas --headed",
     "test:paisabombas": "playwright test --project=paisabombas",
-    "test:saucedemo": "playwright test --project=saucedemo"
+    "test:saucedemo": "playwright test --project=saucedemo",
+    "test:login": "playwright test tests/e2e/paisabombas/auth.spec.ts --project=paisabombas --headed",
+    "test:ordenes": "playwright test tests/e2e/paisabombas/ordenes-compra.spec.ts --project=paisabombas --headed"
   },
   "keywords": [],
   "author": "",

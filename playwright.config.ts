@@ -11,7 +11,7 @@ export default defineConfig({
     ['list'],
   ],
   use: {
-    headless: !!process.env.CI,
+    headless: false,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on',
@@ -21,6 +21,7 @@ export default defineConfig({
       name: 'saucedemo',
       use: {
         ...devices['Desktop Chrome'],
+        channel: 'chrome',
         baseURL: process.env.SAUCE_BASE_URL ?? 'https://www.saucedemo.com',
       },
       testMatch: ['**/add-to-cart.spec.ts'],
@@ -29,6 +30,7 @@ export default defineConfig({
       name: 'paisabombas',
       use: {
         ...devices['Desktop Chrome'],
+        channel: 'chrome',
         baseURL: process.env.APP_BASE_URL ?? 'https://dev.paisabombas.app',
       },
       testMatch: ['**/paisabombas/**/*.spec.ts'],
