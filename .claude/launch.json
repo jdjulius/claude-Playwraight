@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Playwright UI Mode",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test:ui"],
+      "port": 8080
+    },
+    {
+      "name": "Playwright HTML Report",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "report"],
+      "port": 9323
+    }
+  ]
+}
